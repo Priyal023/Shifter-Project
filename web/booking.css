@@ -1,0 +1,125 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-image: linear-gradient(to right top, #eac3f4, #e3d0fc,
+     #e0ddff, #e2e8ff, #e9f1ff, #eaf2fb, #ecf2f8, #eff2f4, 
+     #e7ebec, #e0e3e5, #d8dcdd, #d1d5d5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    min-height: 100vh;
+    background-size: cover;
+}
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  margin-right: 20%;
+}
+.booking-module {
+    width: 820px;
+    background-image: linear-gradient(to right top, #dcf5f5, #e1f6f9, 
+    #e7f7fb, #edf9fd, #f3fafe, #f2f7fb, #f0f5f7, #eff2f4, #e7ebec,
+     #e0e3e5, #d8dcdd, #d1d5d5);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #333;
+    border-radius: 10px;
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+   align-items: center;
+    padding: 30px 50px;
+}
+
+.booking-module h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.booking-module label {
+  display: block;
+  margin-top: 20px;
+}
+
+.booking-module input,
+.booking-module select,
+.booking-module textarea {
+  width:150%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.booking-module button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.booking-module button:hover {
+  background-color: #45a049;
+}
+/*pricing body*/
+.pricing-module {
+  width: 420px;
+  background-image: linear-gradient(to right top, #dcf5f5, #e1f6f9, 
+  #e7f7fb, #edf9fd, #f3fafe, #f2f7fb, #f0f5f7, #eff2f4, #e7ebec,
+   #e0e3e5, #d8dcdd, #d1d5d5);
+  border: 2px solid rgba(255, 255, 255, .2);
+  color: #333;
+  border-radius: 10px;
+  /* backdrop-filter: blur(20px); */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+}
+.pricing-module h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing-module label {
+  display: block;
+  margin-top: 20px;
+}
+
+.pricing-module input,
+.pricing-module select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.pricing-module button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.pricing-module button:hover {
+  background-color: #45a049;
+}
+
+#price {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}

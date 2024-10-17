@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body onload="showPanel('booking')">
+<div id="booking" class="booking-module panel">
+  <div>  <h1>Book Your Vehicle</h1>
+  <form onsubmit="return check(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pickup">Select Pickup Address:</label>
+        <select name="pickup" id="pickup" required>
+          <option value="other">Other</option>
+          <option value="1">New York</option>
+          <option value="2">Los Angeles</option>
+          <option value="3">Chicago</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="delivery">Select Delivery Address:</label>
+        <select name="delivery" id="delivery" required>
+          <option value="other">Other</option>
+          <option value="1">New York</option>
+          <option value="2">Los Angeles</option>
+          <option value="3">Chicago</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="vehicle">Vehicle:</label>
+        <select name="vehicle" id="vehicle" required onfocus="disable('null')">
+          <option id="null" value=""></option>
+          <option value="smallTruck">Small Truck</option>
+          <option value="mediumTruck">Medium Truck</option>
+          <option value="largeTruck">Large Truck</option>
+          <option value="tempo">Tempo</option>
+          <option value="twoWheeler">Two Wheeler</option>
+        </select>        
+      </div>
+      <div class="form-group">
+        <label for="goods">Goods Description:</label>
+        <textarea id="goods" name="goods" required></textarea>
+      </div>
+    </div>
+    <button  id="booknow" type="submit">Book Now</button>
+  </form>
+ </div>
+</div>
+<div id="pricing" class="panel" style="display: none;">
+  <div class="pricing-module">
+    <h1>Shifting Services Pricing</h1>
+    <form class="form-group">
+      <label for="distance">Distance (in km): <span id="distanse">00</span> km</label>
+      <label for="vehicle">Vehicle:</label>
+      <input type="text" id="Svehicle" name="Svehicle" readonly>
+      <label for="price">Price (in RS):</label>
+      <input type="number" id="fair" name="price" readonly>
+      <label for="Addresss">Enter complete address:</label>
+      <textarea name="Address" id="address" required aria-multiline="true"></textarea>
+      <label for="paymentMode">Payment Mode:</label>
+      <select id="payMode" required>
+        <option value="Cash On Delivery">Cash On Delivery</option>
+        <option value="netBanking" disabled>NetBanking</option>
+        <option value="debitCard" disabled>Debit Card</option>
+        <option value="creditCard" disabled>Credit Card</option>
+        <option value="upi" disabled>UPI</option>
+      </select>
+      <button id="btn" onclick="showOrderConfirmation(event);showPanel('orderconfirmation')">Place Order</button>
+    </form>
+  </div>
+</div>
+<div id="orderconfirmation" class="panel">
+  <div class="pricing-module">
+    <h2>Order Confirmation Report</h2>
+    <div class="order-confirmation">
+      <iframe src="https://giphy.com/embed/zxRfj8CjpXaxYTkRoP" width="340" height="171" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+    <div class="order-details">
+      <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+      <p><strong>Customer Name:</strong> <span id="customerName"></span></p>
+      <p><strong>Customer Address:</strong> <span id="customerAddress"></span></p>
+    </div>
+    <div class="delivery-info">
+      <p><strong>Rider's Info:</strong> <span id="riderName"></span></p>
+      <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
+      <p><strong>Rider's Number:</strong> <span id="riderNumber"></span></p>
+      <p><strong>Items Description:</strong> <span id="items"></span></p>
+    </div>
+    <div class="payment-details">
+      <p><strong>Payment Method:</strong> <span id="paymentMethod"></span></p>
+      <p><strong>Payment Status:</strong> <span id="paymentStatus"></span></p>
+      <p><strong>Payment Date:</strong> <span id="paymentDate"></span></p>
+    </div>
+    <div class="order-summary">
+      <p><strong>Total Cost:</strong> <span id="totalCost"></span></p>
+      <p><strong>Subtotal:</strong> <span id="subtotal"></span></p>
+      <p><strong>Tax (12%):</strong> <span id="tax"></span></p>
+      <p><strong>Total:</strong> <span id="total"></span></p>
+      <button onclick="reload()">Ok</button>
+    </div>
+  </div>
+</div>
+<script src="booking.js"></script>
+</body>
+</html>

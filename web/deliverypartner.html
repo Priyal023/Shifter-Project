@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="deliverpartner.css">
+<<script src="script.js"></script>
+<div class="delivery-partner" onload="loginCheck()">
+        <h1>Delivery Partner Registration</h1>
+	<form id="deliveryPartner" action="DeliveryPartnerRegistration" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+		</div>
+		<div class="form-group">
+			<label for="mobile">Mobile Number:</label>
+			<input type="tel" id="mobile" name="mobile" placeholder="Enter your number" required>
+		</div>
+    </div>
+    <div class="form-row">
+		<div class="form-group">
+			<label for="email">Email ID:</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+		</div>
+		<div class="form-group">
+			<label for="driving-licence">Driving License:</label>
+			<input type="text" id="drivingLicence" name="drivingLicence" placeholder="Enter your DL number" required>
+		</div>
+        </div>
+        <div class="form-row">
+		<div class="form-group">
+			<label for="government-id">Government ID:</label>
+			<input type="text" id="goveID" name="goveID" placeholder="Enter your Adhar or pan, etc" required>
+		</div>
+		<div class="form-group">
+			<label for="photo">Photo:</label>
+			<input type="file" id="photo" name="photo">
+		</div>
+    </div>
+    <div class="form-row">
+		<div class="form-group">
+			<label for="vehicle-number">Vehicle Number:</label>
+			<input type="text" id="vehicleNumber" name="vehicleNumber" placeholder="Enter your vehicle no." required>
+		</div>
+		<div class="form-group">
+			<label for="vehicle-type">Vehicle Type:</label>
+			<select id="vehicle-type" name="vehicle-type">
+				 <option value="small-truck">Small Truck</option>
+          <option value="medium-truck">Medium Truck</option>
+          <option value="large-truck">Large Truck</option>
+          <option value="tempo">Tempo</option>
+          <option value="two wheeler">Two Wheeler</option>
+			</select>
+		</div>
+        </div>
+        <div class="form-row">
+		<div class="form-group">
+			<label for="vehicle-registration-proof">Vehicle Registration Proof:</label>
+			<input type="file" id="vehicleRegistrationProof" name="vehicleRegistrationProof" placeholder="Insert the proof" required>
+		</div>
+		<div class="form-group">
+			<label for="vehicle-insurance">Vehicle Insurance:</label>
+			<input type="text" id="vehicleInsurance" name="vehicleInsurance" placeholder="Enter your insurance no." required>
+		</div>
+        </div>
+		<div class="form-group">
+			<button type="submit">Register</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,87 @@
+.head_bar{
+    display: flex;
+  height: 50px;
+justify-content: space-between;
+align-items: center;
+min-width: 800px;
+ border-bottom: 1px solid #b6b1b1;
+}
+.navigation_bar{
+    display: flex;
+justify-content: space-between;
+min-width: 915px;
+}
+.navigation_bar a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 800;
+    font-style: normal;
+    outline-color: #282c3f;
+}
+.image_12{
+height:  20 rem;
+width: 100vw ;
+ display: block;
+align-items: center;
+margin-right: 50px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg-img {
+    background-image: url('images/business.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.container input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
